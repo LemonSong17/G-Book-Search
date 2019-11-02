@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 app.use("/api", apiRoutes);
 
 // Connect to MongoDB
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://LemonSong17:Fumanchu7@ds141188.mlab.com:41188/heroku_szxl6c7r";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
@@ -27,7 +27,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://LemonSong17:Fumanchu7@ds141188.mlab.com:41188/heroku_szxl6c7r");
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
